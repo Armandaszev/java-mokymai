@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masyvai</title>
+</head>
+<body>
+    <script>
+        //Masivas = Array-vertimas [] zyma
+        //object = object {} zyma
+        let x = [15, 'Stringas', 30, '12']
+
+        x.push('galas') // push prideda i gala masyvo []
+        x.unshift('priekis') // unshift prideda i prieki masyvo []
+        x.shift() // panaikins push`a.
+        x.pop() // panaikina unshift reiksme.
+        
+        console.log(x)
+
+        //Generuojame masyva kurio ilgis 50 elementu
+        let masyvas = []
+
+        for(let i = 0; i < 50; i++) {
+            masyvas[i] = i
+        }
+        //atsispausdiname suformuota masyva
+        console.log(masyvas)
+
+        //paimame duomenis is masyvo cikle
+        //pakeisti kiekviena reiksme, supliusuojant 
+        for(let i = 0; i < masyvas.length; i++ ) {
+            if(i != masyvas.length - 1)
+            masyvas[i] += masyvas[i+1]
+
+        }
+        //Modernus funkcijos aprasymas
+        masyvas.forEach( (reiksme, indeksas) => {
+            console.log(reiksme + 'Indeksas' + indeksas)
+        } )
+
+        //klasikinis funkcijos callback aprasymas
+       // masyvas.forEach( function(reiksme, indeksas) {
+         //   console.log(masyvas)
+        //})
+
+
+
+    </script>
+</body>
+</html>
